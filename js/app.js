@@ -1,12 +1,14 @@
-const colorModeButton = document.querySelector("#color-mode");
+const colorModeButton = document.querySelectorAll(".color-mode");
 const body = document.body;
 
-colorModeButton.addEventListener("click", cambiarModoColor);
-function cambiarModoColor(){
-  button.classlist.add("darkmode");
+
+colorModeButton.forEach(button => {
+  button.addEventListener("click", () => cambiarModoColor(button));
+})
+
+function cambiarModoColor(button){
+  button.classList.toggle("darkmode");
 }
-
-
 
 
 

@@ -20,7 +20,7 @@ body{
   width: 25%;
   margin: 15px 0;
   transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(0, 165, 14, 0.7);
+  box-shadow: 0 3px 10px rgb(255, 255, 255);
 }
 .rowA, .rowB, .rowC, .rowD, .rowE, .rowF {
   display: flex;
