@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+h1 {
+  color: #fff;
 }
 
 body{
@@ -18,13 +22,14 @@ body{
   background-color: #fff;
   height: 70px;
   width: 25%;
-  margin: 15px 0;
+  margin: 5px 0 30px 100px;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgb(255, 255, 255);
 }
 .rowA, .rowB, .rowC, .rowD, .rowE, .rowF {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
   
 }
 
@@ -81,7 +86,7 @@ button.darkmode{
 }
 .container .card .content h2{
   position: absolute;
-  top: -110px;
+  top: -70px;
   right: 30px;
   font-size: 8em;
   color: rgba(209, 212, 214, 0.486);
@@ -107,13 +112,13 @@ button.darkmode{
   border-radius: 20px;
   text-decoration: none;
   font-weight:900;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
 }
 
 
 
 
-/* Imagenes de las cards */
+/* Imagenes de las cards premmiere*/
 
 .container .imgone{
     background-image: url(../images/avenger.jpg);
@@ -133,7 +138,117 @@ button.darkmode{
 }
 
 
+/* Imagenes cards recommnended */
+section .container .imgFour{
+  background-image: url(../images/back.jpg);
+  background-size:contain;
+  background-repeat: no-repeat;
   
+}
+.container .imgFive {
+background-image: url(../images/james.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+}
+.container .imgSix {
+background-image: url(../images/star.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+}
   
-  
-  
+/* login */
+
+
+.center button {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  opacity: 1;
+  width: 380px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(2, 2, 2, 0.712);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.active{
+  display: none;
+
+
+}
+
+.popup .close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup .form .h2{
+  text-align: center;
+  color: #222;
+  margin: 10px 0 20px;
+  font-size: 20px;
+}
+
+.popup .form .form-element{
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label{
+  font-size: 14px;
+  color: #222;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"]{
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.popup .form .form-element button{
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup .form .form-element a{
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: rgba(202, 10, 10, 0.842);
+  text-decoration: none;
+  font-weight: 600;
+
+}
