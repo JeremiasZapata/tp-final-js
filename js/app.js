@@ -21,7 +21,7 @@ document.querySelector("#show-login").addEventListener("click",function(){
 //cierra el formulario de login
 document.querySelector(".loginPopup .close-btn").addEventListener("click",function(){
   document.querySelector(".loginPopup").classList.add("hide");
-  formulario.reset();
+  datosFormularioLogin.reset();
 });
 
 
@@ -31,16 +31,19 @@ document.querySelector(".loginPopup .close-btn").addEventListener("click",functi
 document.querySelector("#signUp").addEventListener("click",function(){
   document.querySelector(".popup").classList.remove("hide");
   document.querySelector(".loginPopup").classList.add("hide");
+  datosFormularioLogin.reset();
 });
 
 //cierra el formulario de sign up
 document.querySelector(".popup .close-btn").addEventListener("click",function(){
 document.querySelector(".popup").classList.add("hide");
-
+datosFormularioSignUp.reset();
+datosFormularioLogin.reset();
 });
 
 
-const formulario = document.querySelector("#loginForm");
+const datosFormularioLogin = document.querySelector("#loginForm");
+const datosFormularioSignUp = document.querySelector("#signUpnForm");
 let signUpName = document.querySelector("#signUpName");
 let signUpUserName = document.querySelector("#signUpUserName");
 let signUpPassword = document.querySelector("#signUpPassword");
