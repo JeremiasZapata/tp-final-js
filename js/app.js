@@ -40,7 +40,7 @@ document.querySelector(".popup").classList.add("hide");
 });
 
 
-const formulario = document.querySelector("loginForm");
+const formulario = document.querySelector("#loginForm");
 let signUpName = document.querySelector("#signUpName");
 let signUpUserName = document.querySelector("#signUpUserName");
 let signUpPassword = document.querySelector("#signUpPassword");
