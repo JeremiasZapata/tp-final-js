@@ -48,17 +48,18 @@
     <div class="center">
         <button id="show-login">Login</button>
     </div>
-    <div class="popup active">
+    <!-- login form -->
+    <div class="loginPopup hide">
         <div class="close-btn">X</div>
         <form class="form">
             <h2>Login</h2>
         <div class="form-element">
-            <label for="email">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+            <label for="user">User</label>
+            <input type="text" id="loginUser" placeholder="Enter your Username" required>
         </div>
         <div class="form-element">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter password" required>
+            <input type="password" id="loginPassword" placeholder="Enter password" required>
         </div>
         <div class="form-element">
             <input type="checkbox" id="remember-me">
@@ -71,12 +72,44 @@
             <a href="#">Forgot password?</a>
         </div>
         <div class="form-element">
-            <a href="#">Sign up</a>
+            <a href="#" id="signUp">Sign up</a>
         </div>
         </form>
     </div>
 
+
+
+    <!-- Sign Up -->
     
+
+    <div class="popup hide">
+        <div class="close-btn">X</div>
+        <form class="form">
+            <h2>Sign Up</h2>
+        <div class="form-element">
+            <label for="SignUpName">Name</label>
+            <input type="text" id="signUpName" placeholder="Enter your Name" required>
+        </div>
+        <div class="form-element">
+            <label for="user">User</label>
+            <input type="text" id="signUpUserName" placeholder="Enter your Username" required>
+        </div>
+        <div class="form-element">
+            <label for="signUpPassword">Password</label>
+            <input type="password" id="signUpPassword" placeholder="Enter password" required>
+        </div>
+        <div class="form-element">
+            <label for="confirPassword">Confirm Password</label>
+            <input type="password" id="ConfirmPassword" placeholder="Re-Enter password" required>
+        </div>
+        
+        <div class="form-element">
+            <button type="submit">Sing up</button>
+        </div>
+        
+        </form>
+    </div>
+
     
 
 

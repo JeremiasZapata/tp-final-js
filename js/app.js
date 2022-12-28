@@ -1,3 +1,4 @@
+// Seats
 const colorModeButton = document.querySelectorAll(".color-mode");
 const body = document.body;
 
@@ -10,13 +11,56 @@ function cambiarModoColor(button){
   button.classList.toggle("darkmode");
 }
 
+
+// login
 document.querySelector("#show-login").addEventListener("click",function(){
-  document.querySelector(".popup").classList.remove("active");
+  document.querySelector(".loginPopup").classList.remove("hide");
+});
+
+document.querySelector(".loginPopup .close-btn").addEventListener("click",function(){
+  document.querySelector(".loginPopup").classList.add("hide");
+});
+
+
+//Sign Up
+
+document.querySelector("#signUp").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("hide");
+  document.querySelector(".loginPopup").classList.add("hide");
 });
 
 document.querySelector(".popup .close-btn").addEventListener("click",function(){
-  document.querySelector(".popup").classList.add("active");
+document.querySelector(".popup").classList.add("hide");
 });
+
+
+let signUpName = document.querySelector("#signUpName");
+let signUpUserName = document.querySelector("#signUpUserName");
+let signUpPassword = document.querySelector("#signUpPassword");
+let ConfirmPassword = document.querySelector("#ConfirmPassword");
+let loginUser = document.querySelector("#loginUser");
+let loginPass = document.querySelector("#loginPassword");
+
+signUpName.addEventListener("input", function () {
+  console.log(signUpName.value);
+})
+signUpUserName.addEventListener("input", function () {
+  console.log(signUpUserName.value);
+})
+signUpPassword.addEventListener("input", function () {
+  console.log(signUpPassword.value);
+})
+ConfirmPassword.addEventListener("input", function () {
+  console.log(ConfirmPassword.value);
+})
+loginUser.addEventListener("input", function () {
+  console.log(loginUser.value);
+})
+loginPass.addEventListener("input", function () {
+  console.log(loginPass.value);
+})
+
+
 
 /* loggin crea usuario y lo guardamos en el Localstorage */
   
