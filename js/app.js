@@ -13,27 +13,34 @@ function cambiarModoColor(button){
 
 
 // login
+//abre el formulario de login
 document.querySelector("#show-login").addEventListener("click",function(){
   document.querySelector(".loginPopup").classList.remove("hide");
 });
 
+//cierra el formulario de login
 document.querySelector(".loginPopup .close-btn").addEventListener("click",function(){
   document.querySelector(".loginPopup").classList.add("hide");
+  formulario.reset();
 });
 
 
 //Sign Up
+//abre el formulario de sign up
 
 document.querySelector("#signUp").addEventListener("click",function(){
   document.querySelector(".popup").classList.remove("hide");
   document.querySelector(".loginPopup").classList.add("hide");
 });
 
+//cierra el formulario de sign up
 document.querySelector(".popup .close-btn").addEventListener("click",function(){
 document.querySelector(".popup").classList.add("hide");
+
 });
 
 
+const formulario = document.querySelector("loginForm");
 let signUpName = document.querySelector("#signUpName");
 let signUpUserName = document.querySelector("#signUpUserName");
 let signUpPassword = document.querySelector("#signUpPassword");
@@ -54,7 +61,7 @@ ConfirmPassword.addEventListener("input", function () {
   console.log(ConfirmPassword.value);
 })
 loginUser.addEventListener("input", function () {
-  console.log(loginUser.value);
+  console.log(loginUser);
 })
 loginPass.addEventListener("input", function () {
   console.log(loginPass.value);
