@@ -94,9 +94,7 @@ let signUpPassword = document.querySelector("#signUpPassword").value;
 let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
 
 
-nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
-console.log(nuevoUsuario);
-agregarNuevoUser();
+
 });
 
 //clase constructora de nuevos usuarios en global Scope
@@ -108,14 +106,19 @@ class SignUsers {
     this.confirmPass = ConfirmPassword;
   }
 }
+nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
+console.log(nuevoUsuario);
+agregarNuevoUser();
 
-  function agregarNuevoUser(){
+
+
+  function agregarNuevoUser(nuevoUsuario){
     baseDatosUsuarios.push(nuevoUsuario);
     console.log(baseDatosUsuarios);
     localStorage.setItem("Nuevousuarios", JSON.stringify(baseDatosUsuarios));
   }
 
-
+  
 
 
 
