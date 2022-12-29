@@ -48,6 +48,9 @@ let signUpName = document.querySelector("#signUpName");
 let signUpUserName = document.querySelector("#signUpUserName");
 let signUpPassword = document.querySelector("#signUpPassword");
 let ConfirmPassword = document.querySelector("#ConfirmPassword");
+
+
+
 //login
 
 //lectura de datos del login y guardado en objeto
@@ -90,7 +93,13 @@ let signUpUserName = document.querySelector("#signUpUserName").value;
 let signUpPassword = document.querySelector("#signUpPassword").value;
 let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
 
-//clase constructora
+
+nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
+console.log(nuevoUsuario);
+agregarNuevoUser();
+});
+
+//clase constructora de nuevos usuarios en global Scope
 class SignUsers {
   constructor(signUpName, signUpUserName, signUpPassword,ConfirmPassword){
     this.name = signUpName;
@@ -99,10 +108,6 @@ class SignUsers {
     this.confirmPass = ConfirmPassword;
   }
 }
-nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
-console.log(nuevoUsuario);
-agregarNuevoUser();
-});
 
   function agregarNuevoUser(){
     baseDatosUsuarios.push(nuevoUsuario);
