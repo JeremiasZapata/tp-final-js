@@ -84,6 +84,11 @@ console.log(userOject.user);
 document.querySelector(".welcome").classList.remove("hide");
 document.querySelector(".loginPopup").classList.add("hide");
 
+
+
+
+
+
 document.querySelector(".welcome .close-btn").addEventListener("click",function(){
   document.querySelector(".welcome").classList.add("hide");
   datosFormularioLogin.reset();
@@ -129,6 +134,8 @@ let signUpName = document.querySelector("#signUpName").value; //capturo los dato
 let signUpUserName = document.querySelector("#signUpUserName").value;
 let signUpPassword = document.querySelector("#signUpPassword").value;
 let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
+document.querySelector(".popup").classList.add("hide");
+
 
 
 
