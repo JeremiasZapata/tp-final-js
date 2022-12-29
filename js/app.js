@@ -81,21 +81,27 @@ const userLogged = localStorage.getItem("usuarios");
 console.log(userLogged);
 const userOject = JSON.parse(userLogged);
 console.log(userOject.user);
-document.querySelector(".welcome").classList.remove("hide");
-document.querySelector(".loginPopup").classList.add("hide");
+// document.querySelector(".welcome").classList.remove("hide");
+// document.querySelector(".loginPopup").classList.add("hide");
+
+welcome.innerHTML = `
+    <div class="alert alert-info" role="alert">
+        <h3>¡BIENVENIDO!</h3>
+        <h2> ${userOject.user} </h2>
+    </div>
+    `
+
+    document.querySelector(".loginPopup").classList.add("hide");
+    datosFormularioLogin.reset();
+
+
+// document.querySelector(".welcome .close-btn").addEventListener("click",function(){
+//   document.querySelector(".welcome").classList.add("hide");
+//   datosFormularioLogin.reset();
+// });
 
 
 
-
-
-
-document.querySelector(".welcome .close-btn").addEventListener("click",function(){
-  document.querySelector(".welcome").classList.add("hide");
-  datosFormularioLogin.reset();
-});
-
-
-datosFormularioLogin.reset();
 
 });
 
