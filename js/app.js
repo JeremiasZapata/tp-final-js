@@ -108,16 +108,21 @@ class SignUsers {
 }
 nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
 console.log(nuevoUsuario);
+
+
+function agregarNuevoUser(nuevoUsuario){
+  baseDatosUsuarios.push(nuevoUsuario);
+  console.log(baseDatosUsuarios);
+  localStorage.setItem("Nuevousuarios", JSON.stringify(baseDatosUsuarios));
+}
+
+
+
 agregarNuevoUser();
 
 
 
-  function agregarNuevoUser(nuevoUsuario){
-    baseDatosUsuarios.push(nuevoUsuario);
-    console.log(baseDatosUsuarios);
-    localStorage.setItem("Nuevousuarios", JSON.stringify(baseDatosUsuarios));
-  }
-
+  
   
 
 
