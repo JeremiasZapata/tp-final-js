@@ -98,7 +98,7 @@ class SignUsers {
 
 //lectura de datos del signUp y guardado en objeto
 let baseDatosUsuarios = JSON.parse(localStorage.getItem('Nuevousuarios')) || [];
-const signUpButton = document.querySelector("#signUpFormSubmit")
+const signUpButton = document.querySelector("#signUpFormSubmit");
 
 
 signUpButton.addEventListener("click",function(){
@@ -108,8 +108,29 @@ let signUpUserName = document.querySelector("#signUpUserName").value;
 let signUpPassword = document.querySelector("#signUpPassword").value;
 let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
 
-if (signUpPassword.value !== ConfirmPassword.value) {
+
+
+//modal passmisstaken
+const closeButton = document.querySelector("#closePassMisstaken");
+closeButton.addEventListener("click", function(){
+  document.querySelector(".passMisstaken").classList.add("hide");
+})
+
+document.querySelector(".passMisstaken .close-btn").addEventListener("click",function(){
+  document.querySelector(".passMisstaken").classList.add("hide");
+  datosFormularioSignUp.reset();
+  datosFormularioLogin.reset();
+  });
+
+
+if (signUpPassword !== ConfirmPassword) {
   console.log("las contraseñas no coinciden");
+  document.querySelector(".popup").classList.add("hide");
+  datosFormularioSignUp.reset();
+  datosFormularioLogin.reset();
+
+  document.querySelector(".passMisstaken").classList.remove("hide");
+
 }
 
 const nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
