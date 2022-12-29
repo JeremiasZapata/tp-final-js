@@ -60,13 +60,7 @@ document.querySelector("#signIn").addEventListener("click",function(e){
 let loginUser = document.querySelector("#loginUser").value; //capturo los datos
 let loginPass = document.querySelector("#loginPassword").value;
 
-// modal de bienvenida
 
-const userLogged = localStorage.getItem("usuarios");
-console.log(userLogged);
-const userOject = JSON.parse(userLogged);
-console.log(userOject);
-datosFormularioLogin.reset();
 
 
 
@@ -77,16 +71,34 @@ class Users {
     this.pass = loginPass;
   }
 }
-persona = new Users(loginUser, loginPass)
-console.log(persona);
-aagregar();
+userLoing = new Users(loginUser, loginPass)
+console.log(userLoing);
+localStorage.setItem("usuarios", JSON.stringify(userLoing));
+
+// modal de bienvenida
+
+const userLogged = localStorage.getItem("usuarios");
+console.log(userLogged);
+const userOject = JSON.parse(userLogged);
+console.log(userOject.user);
+document.querySelector(".welcome").classList.remove("hide");
+document.querySelector(".loginPopup").classList.add("hide");
+
+document.querySelector(".welcome .close-btn").addEventListener("click",function(){
+  document.querySelector(".welcome").classList.add("hide");
+  datosFormularioLogin.reset();
 });
 
-  function aagregar(){
-    baseDatos.push(persona);
-    console.log(baseDatos);
-    localStorage.setItem("usuarios", JSON.stringify(baseDatos));
-  }
+
+datosFormularioLogin.reset();
+
+});
+
+  // function aagregar(){
+  //   baseDatos.push(persona);
+  //   console.log(baseDatos);
+  //   localStorage.setItem("usuarios", JSON.stringify(baseDatos));
+  // }
 
 
 
