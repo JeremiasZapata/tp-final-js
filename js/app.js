@@ -84,19 +84,6 @@ aagregar();
 
 //Sign up
 
-//lectura de datos del signUp y guardado en objeto
-let baseDatosUsuarios = [];
-document.querySelector("#signUpFormSubmit").addEventListener("click",function(e){
-  e.preventDefault(); // no me borra todos los datos del array
-let signUpName = document.querySelector("#signUpName").value; //capturo los datos
-let signUpUserName = document.querySelector("#signUpUserName").value;
-let signUpPassword = document.querySelector("#signUpPassword").value;
-let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
-
-
-
-});
-
 //clase constructora de nuevos usuarios en global Scope
 class SignUsers {
   constructor(signUpName, signUpUserName, signUpPassword,ConfirmPassword){
@@ -106,11 +93,30 @@ class SignUsers {
     this.confirmPass = ConfirmPassword;
   }
 }
-nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
-console.log(nuevoUsuario);
+
+//lectura de datos del signUp y guardado en objeto
+let baseDatosUsuarios = [];
+const signUpButton = document.querySelector("#signUpFormSubmit")
+
+signUpButton.addEventListener("click",function(){
+  // e.preventDefault(); // no me borra todos los datos del array
+let signUpName = document.querySelector("#signUpName").value; //capturo los datos
+let signUpUserName = document.querySelector("#signUpUserName").value;
+let signUpPassword = document.querySelector("#signUpPassword").value;
+let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
+
+if (signUpPassword.value !== ConfirmPassword.value) {
+  console.log("las contraseñas no coinciden");
+}
+
+const nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
+agregarNuevoUser(nuevoUsuario);
+datosFormularioSignUp.reset();
+});
 
 
 function agregarNuevoUser(nuevoUsuario){
+  console.log(nuevoUsuario);
   baseDatosUsuarios.push(nuevoUsuario);
   console.log(baseDatosUsuarios);
   localStorage.setItem("Nuevousuarios", JSON.stringify(baseDatosUsuarios));
@@ -118,7 +124,7 @@ function agregarNuevoUser(nuevoUsuario){
 
 
 
-agregarNuevoUser();
+
 
 
 
