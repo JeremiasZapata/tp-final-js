@@ -85,6 +85,8 @@ aagregar();
 //Sign up
 
 //clase constructora de nuevos usuarios en global Scope
+// const nuevoUsuario = JSON.parse(localStorage.getItem('Nuevousuarios')) || [];
+
 class SignUsers {
   constructor(signUpName, signUpUserName, signUpPassword,ConfirmPassword){
     this.name = signUpName;
@@ -95,8 +97,9 @@ class SignUsers {
 }
 
 //lectura de datos del signUp y guardado en objeto
-let baseDatosUsuarios = [];
+let baseDatosUsuarios = JSON.parse(localStorage.getItem('Nuevousuarios')) || [];
 const signUpButton = document.querySelector("#signUpFormSubmit")
+
 
 signUpButton.addEventListener("click",function(){
   // e.preventDefault(); // no me borra todos los datos del array
