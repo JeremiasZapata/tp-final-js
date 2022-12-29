@@ -60,6 +60,16 @@ document.querySelector("#signIn").addEventListener("click",function(e){
 let loginUser = document.querySelector("#loginUser").value; //capturo los datos
 let loginPass = document.querySelector("#loginPassword").value;
 
+// modal de bienvenida
+
+const userLogged = localStorage.getItem("usuarios");
+console.log(userLogged);
+const userOject = JSON.parse(userLogged);
+console.log(userOject);
+datosFormularioLogin.reset();
+
+
+
 //clase constructora
 class Users {
   constructor(loginUser, loginPass){
@@ -85,7 +95,7 @@ aagregar();
 //Sign up
 
 //clase constructora de nuevos usuarios en global Scope
-// const nuevoUsuario = JSON.parse(localStorage.getItem('Nuevousuarios')) || [];
+
 
 class SignUsers {
   constructor(signUpName, signUpUserName, signUpPassword,ConfirmPassword){
