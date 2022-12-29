@@ -75,16 +75,51 @@ aagregar();
     localStorage.setItem("usuarios", JSON.stringify(baseDatos));
   }
 
-// let userlogin = [];
-// userlogin.push(persona);
-// localStorage.setItem("Usuarios", JSON.stringify(userlogin));
 
-// function User(loginUser, loginPass){
-//   this.loginUser = loginUser;
-//   this.loginPass = loginPass;
-// }
-// const NUser = new User (loginUser,loginPass);
-// console.log(NUser);
+
+
+
+//Sign up
+
+//lectura de datos del signUp y guardado en objeto
+let baseDatosUsuarios = [];
+document.querySelector("#signUpFormSubmit").addEventListener("click",function(e){
+  e.preventDefault(); // no me borra todos los datos del array
+let signUpName = document.querySelector("#signUpName").value; //capturo los datos
+let signUpUserName = document.querySelector("#signUpUserName").value;
+let signUpPassword = document.querySelector("#signUpPassword").value;
+let ConfirmPassword = document.querySelector("#ConfirmPassword").value;
+
+//clase constructora
+class SignUsers {
+  constructor(signUpName, signUpUserName, signUpPassword,ConfirmPassword){
+    this.name = signUpName;
+    this.userName = signUpUserName;
+    this.signUpPass = signUpPassword;
+    this.confirmPass = ConfirmPassword;
+  }
+}
+nuevoUsuario = new SignUsers(signUpName, signUpUserName, signUpPassword, ConfirmPassword )
+console.log(nuevoUsuario);
+agregarNuevoUser();
+});
+
+  function agregarNuevoUser(){
+    baseDatosUsuarios.push(nuevoUsuario);
+    console.log(baseDatosUsuarios);
+    localStorage.setItem("Nuevousuarios", JSON.stringify(baseDatosUsuarios));
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
