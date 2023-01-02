@@ -14,9 +14,16 @@ function cambiarModoColor(button){
 
 // login
 //abre el formulario de login
-document.querySelector("#show-login").addEventListener("click",function(){
+document.querySelector("#login").addEventListener("click", function(e){
+  e.preventDefault();
   document.querySelector(".loginPopup").classList.remove("hide");
+
+  
+  
 });
+// document.querySelector("#show-login").addEventListener("click",function(){
+//   document.querySelector(".loginPopup").classList.remove("hide");
+// });
 
 //cierra el formulario de login
 document.querySelector(".loginPopup .close-btn").addEventListener("click",function(){
@@ -77,21 +84,32 @@ localStorage.setItem("usuarios", JSON.stringify(userLoing));
 
 // modal de bienvenida
 
-const userLogged = localStorage.getItem("usuarios");
-console.log(userLogged);
-const userOject = JSON.parse(userLogged);
-console.log(userOject.user);
+// const userLogged = localStorage.getItem("usuarios");
+// console.log(userLogged);
+// const userOject = JSON.parse(userLogged);
+// console.log(userOject.user);
 // document.querySelector(".welcome").classList.remove("hide");
 // document.querySelector(".loginPopup").classList.add("hide");
 
-welcome.innerHTML = `
-    <div class="alert alert-info" role="alert">
-        <h3>¡BIENVENIDO!</h3>
-        <h2> ${userOject.user} </h2>
-    </div>
-    `
+const userLogged = localStorage.getItem("usuarios");
+console.log(userLogged);
+const userOject = JSON.parse(userLogged);
 
-    document.querySelector(".loginPopup").classList.add("hide");
+  userloged.innerHTML = `
+  <li class="nav-item">
+  <a class="nav-link" href="#"> Welcome ${userOject.user} </a>
+</li>
+    `
+    document.querySelector(".popup").classList.add("hide");
+
+// welcome.innerHTML = `
+//     <div class="alert alert-info" role="alert">
+//         <h3>¡BIENVENIDO!</h3>
+//         <h2> ${userOject.user} </h2>
+//     </div>
+//     `
+
+    document.querySelector(".logtrigger").classList.add("hide");
     datosFormularioLogin.reset();
 
 
