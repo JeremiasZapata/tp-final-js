@@ -92,6 +92,11 @@ const userOject = JSON.parse(userLogged);
   <a class="nav-link" href="#"> Welcome ${userOject.user} </a>
 </li>
     `
+    logout.innerHTML = `
+    <li class="nav-item">
+    <a class="nav-link" href="#"> Logout </a>
+  </li>
+      `
     document.querySelector(".logintrigg").classList.add("hide");
     document.querySelector(".loginPopup").classList.add("hide");
     

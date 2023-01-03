@@ -92,7 +92,7 @@ button.darkmode{
   top: -70px;
   right: 30px;
   font-size: 8em;
-  color: rgba(209, 212, 214, 0.486);
+  color: rgba(255, 255, 255, 0.87);
   pointer-events: none;
 }
 .container .card .content h3{
@@ -142,36 +142,36 @@ button.darkmode{
 
 
 /* Imagenes cards recommnended */
-section .container .imgFour{
-  background-image: url(../images/back.jpg);
+section .container .ten{
+  background-image: url(../images/x\ men.webp);
   background-size:contain;
   background-repeat: no-repeat;
   
 }
 .container .imgFive {
 background-image: url(../images/james.jpg);
-background-size: contain;
+background-size: cover;
 background-repeat: no-repeat;
 }
-.container .imgSix {
+section .container .imgSix {
 background-image: url(../images/star.jpg);
-background-size: contain;
+background-size: cover;
 background-repeat: no-repeat;
 }
 section .container .imgSeven{
   background-image: url(../images/Thor-dark-world-character-thor-textless.webp);
-  background-size:contain;
+  background-size:cover;
   background-repeat: no-repeat;
   
 }
-.container .imgEight {
+section .container .imgEight {
 background-image: url(../images/matrix.jpg);
-background-size: contain;
+background-size: cover;
 background-repeat: no-repeat;
 }
-.container .imgNine {
+section .container .imgNine {
 background-image: url(../images/BROTHERS_IN_ARMS_ITUNES.jpg);
-background-size: contain;
+background-size: cover;
 background-repeat: no-repeat;
 }
   
