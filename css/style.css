@@ -91,7 +91,7 @@ button.darkmode{
   position: absolute;
   top: -70px;
   right: 30px;
-  font-size: 8em;
+  font-size: 6em;
   color: rgba(255, 255, 255, 0.87);
   pointer-events: none;
 }
@@ -123,54 +123,89 @@ button.darkmode{
 
 /* Imagenes de las cards premmiere*/
 
-.container .imgone{
-    background-image: url(../images/avenger.jpg);
+.container .imgOne{
+    background-image: url(../images/estrenos/avatar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     
 }
 .container .imgTwo {
-  background-image: url(../images/avatar.jpg);
+  background-image: url(../images/estrenos/avenger.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .container .imgThree {
-  background-image: url(../images/wakanda.jpg);
+  background-image: url(../images/estrenos/caballeros\ del\ zodiaco.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+.container .imgFour{
+  background-image: url(../images/estrenos/hr_Iron_Man_4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.container .imgFive{
+  background-image: url(../images/estrenos/james.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.container .imgSix {
+background-image: url(../images/estrenos/matrix.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.container .imgSeven{
+  background-image: url(../images/estrenos/Thor-dark-world-character-thor-textless.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.container .imgEight {
+background-image: url(../images/estrenos/wakanda.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.container .imgNine {
+background-image: url(../images/estrenos/wolverine.jpg);
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 
 /* Imagenes cards recommnended */
-section .container .ten{
-  background-image: url(../images/x\ men.webp);
-  background-size:contain;
-  background-repeat: no-repeat;
-  
-}
-.container .imgFive {
-background-image: url(../images/james.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-}
-section .container .imgSix {
-background-image: url(../images/star.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-}
-section .container .imgSeven{
-  background-image: url(../images/Thor-dark-world-character-thor-textless.webp);
+section .container .imgTen{
+  background-image: url(../images/recomendadas/back.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   
 }
-section .container .imgEight {
-background-image: url(../images/matrix.jpg);
+section .container .imgEleven{
+  background-image: url(../images/recomendadas/indiana\ jones.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+section .container .imgTwelve {
+background-image: url(../images/recomendadas/star.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
-section .container .imgNine {
-background-image: url(../images/BROTHERS_IN_ARMS_ITUNES.jpg);
+/* Classic */
+section .container .imgThirteen{
+  background-image: url(../images/clasicas/pulp\ fiction.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+section .container .imgFourteen {
+background-image: url(../images/clasicas/taxidriver.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+section .container .imgFifteen {
+background-image: url(../images/clasicas/the-godfather-631704l.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
