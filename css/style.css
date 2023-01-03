@@ -11,6 +11,9 @@ h1 {
 header nav ul li a{
   color: #fff !important;
 }
+header nav button .hm-color {
+  color: aliceblue !important;
+}
 
 body{
     /* display: flex; */
@@ -25,7 +28,7 @@ body{
   background-color: #fff;
   height: 70px;
   width: 25%;
-  margin: 5px 0 30px 100px;
+  /* margin: 5px 0 30px 100px; */
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgb(255, 255, 255);
 }
