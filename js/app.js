@@ -21,11 +21,8 @@ document.querySelector("#login").addEventListener("click", function(e){
   
   
 });
-// document.querySelector("#show-login").addEventListener("click",function(){
-//   document.querySelector(".loginPopup").classList.remove("hide");
-// });
 
-//cierra el formulario de login
+//cierra el formulario de login y lo resetea
 document.querySelector(".loginPopup .close-btn").addEventListener("click",function(){
   document.querySelector(".loginPopup").classList.add("hide");
   datosFormularioLogin.reset();
@@ -33,7 +30,7 @@ document.querySelector(".loginPopup .close-btn").addEventListener("click",functi
 
 
 //Sign Up
-//abre el formulario de sign up
+//abre el formulario de sign up y resetea formulario login
 
 document.querySelector("#signUp").addEventListener("click",function(){
   document.querySelector(".popup").classList.remove("hide");
@@ -41,7 +38,7 @@ document.querySelector("#signUp").addEventListener("click",function(){
   datosFormularioLogin.reset();
 });
 
-//cierra el formulario de sign up
+//cierra el formulario de sign up y resetea formulario login y signup
 document.querySelector(".popup .close-btn").addEventListener("click",function(){
 document.querySelector(".popup").classList.add("hide");
 datosFormularioSignUp.reset();
@@ -104,16 +101,7 @@ const userOject = JSON.parse(userLogged);
 
 });
 
-  // function aagregar(){
-  //   baseDatos.push(persona);
-  //   console.log(baseDatos);
-  //   localStorage.setItem("usuarios", JSON.stringify(baseDatos));
-  // }
-
-
-
-
-
+  
 //Sign up
 
 //clase constructora de nuevos usuarios en global Scope
@@ -181,59 +169,14 @@ function agregarNuevoUser(nuevoUsuario){
 }
 
 
+// cambio de imagen de background segun tarjeta elegida
 
 
-
-
-
+document.querySelector("#avatar-btn").addEventListener("click",function(){
+  console.log("avatar")
+  document.querySelector("#background").classList.add(".avatar");
   
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-//sign up
-// signUpName.addEventListener("input", function () {
-//   console.log(signUpName.value);
-// })
-// signUpUserName.addEventListener("input", function () {
-//   console.log(signUpUserName.value);
-// })
-// signUpPassword.addEventListener("input", function () {
-//   console.log(signUpPassword.value);
-// })
-// ConfirmPassword.addEventListener("input", function () {
-//   console.log(ConfirmPassword.value);
-// })
-
-//login
-// loginUser.addEventListener("input", function () {
-//   console.log(loginUser);
-// })
-// loginPass.addEventListener("input", function () {
-//   console.log(loginPass.value);
-// })
-
-
-
-/* loggin crea usuario y lo guardamos en el Localstorage */
-  
-// let usuario=prompt("ingrese un su nombre");
-// const passUser=prompt("ingrese su password");
-
-// localStorage.setItem("usuario", usuario)
-
-// let usuarioLocalstorage = localStorage.getItem("usuario");
-
+  });
 
 
 

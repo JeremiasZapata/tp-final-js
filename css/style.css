@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 
 }
 h1 {
@@ -14,6 +15,89 @@ header nav ul li a{
 header nav button .hm-color {
   color: aliceblue !important;
 }
+
+/* #background{
+  background-image: url("../images/backgrounds/avatar.jpg");
+  opacity:0.8;
+} */
+
+/* Backgrounds de butacas */
+
+.avatar{
+  background-image: url("../images/backgrounds/avatar.jpg");
+  opacity:0.8;
+}
+.avengers{
+  background-image: url("../images/backgrounds/Avengers.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.caballeros{
+  background-image: url("../images/backgrounds/caballeros_del_zodiaco.webp");
+  opacity:0.8;
+  background-size: cover;
+}
+.ironman{
+  background-image: url("../images/backgrounds/ironman.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.james{
+  background-image: url("../images/backgrounds/james.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.matrix{
+  background-image: url("../images/backgrounds/matrix.webp");
+  opacity:0.8;
+  background-size: cover;
+}
+.thor{
+  background-image: url("../images/backgrounds/thor.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.wakanda{
+  background-image: url("../images/backgrounds/wakanda.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.wolverine{
+  background-image: url("../images/backgrounds/wolverine.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.pulp-fiction{
+  background-image: url("../images/backgrounds/pulp_fintion.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.taxi-driver{
+  background-image: url("../images/backgrounds/taxi_driver.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.godfather{
+  background-image: url("../images/backgrounds/godfather.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.back-to-the-future{
+  background-image: url("../images/backgrounds/backtothefuture.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.indiana-jones{
+  background-image: url("../images/backgrounds/indiana.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.starWars{
+  background-image: url("../images/backgrounds/starwars.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+
 
 body{
     /* display: flex; */
@@ -44,7 +128,7 @@ body{
 }
 
 button.darkmode{
-  background-color: blue;
+  background-color: rgba(27, 180, 53, 0.868);
   color: #fff;
 }
 
