@@ -4,9 +4,6 @@
 document.querySelector("#login").addEventListener("click", function(e){
   e.preventDefault();
   document.querySelector(".loginPopup").classList.remove("hide");
-
-  
-  
 });
 
 //cierra el formulario de login y lo resetea
@@ -156,14 +153,23 @@ function agregarNuevoUser(nuevoUsuario){
 }
 
 
-// cambio de imagen de background segun tarjeta elegida
 
 
-document.querySelector("#avatar-btn").addEventListener("click",function(){
-  console.log("avatar")
-  document.querySelector("#background").classList.add(".avatar");
-  
-  });
+
+  /* Capturamos el valor del boton de la card */
+
+  document.querySelector("#avatar-btn").addEventListener("click", function(){
+    // e.preventDefault();
+    let backGroundToLs = "matrix";
+    localStorage.setItem("backGroundOnLs", backGroundToLs);
+    });
+
+
+
+
+
+
+
 
 
 

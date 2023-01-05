@@ -9,3 +9,13 @@ colorModeButton.forEach((button) => {
 function cambiarModoColor(button) {
     button.classList.toggle("darkmode");
 }
+
+let classBackGround = localStorage.getItem("backGroundOnLs");
+
+console.log(classBackGround);
+
+// cambio de imagen de background segun tarjeta elegida
+
+document.querySelector("#background").classList.add(classBackGround);
+
+

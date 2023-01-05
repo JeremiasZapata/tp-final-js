@@ -3,110 +3,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+
+body{
+  min-height: 100vh;
+  background: #000000;
 
 }
+
 h1 {
   color: #fff;
 }
+
 header nav ul li a{
   color: #fff !important;
 }
+
 header nav button .hm-color {
   color: aliceblue !important;
 }
 
-/* #background{
-  background-image: url("../images/backgrounds/avatar.jpg");
-  opacity:0.8;
-} */
-
-/* Backgrounds de butacas */
-
-.avatar{
-  background-image: url("../images/backgrounds/avatar.jpg");
-  opacity:0.8;
-}
-.avengers{
-  background-image: url("../images/backgrounds/avengers.webp");
-  opacity:0.8;
-  background-size: cover;
-}
-.caballeros{
-  background-image: url("../images/backgrounds/caballeros_del_zodiaco.webp");
-  opacity:0.8;
-  background-size: cover;
-}
-.ironman{
-  background-image: url("../images/backgrounds/ironman.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.james{
-  background-image: url("../images/backgrounds/james.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.matrix{
-  background-image: url("../images/backgrounds/matrix.webp");
-  opacity:0.8;
-  background-size: cover;
-}
-.thor{
-  background-image: url("../images/backgrounds/thor.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.wakanda{
-  background-image: url("../images/backgrounds/wakanda.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.wolverine{
-  background-image: url("../images/backgrounds/wolverine.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.pulp-fiction{
-  background-image: url("../images/backgrounds/pulp_fintion.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.taxi-driver{
-  background-image: url("../images/backgrounds/taxi_driver.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.godfather{
-  background-image: url("../images/backgrounds/godfather.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.back-to-the-future{
-  background-image: url("../images/backgrounds/backtothefuture.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.indiana-jones{
-  background-image: url("../images/backgrounds/indiana.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.starWars{
-  background-image: url("../images/backgrounds/starwars.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
 
 
-body{
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    min-height: 100vh;
-    background: #000000;
 
-}
+
+
+
 /* asientos */
 .screen {
   background-color: #fff;
@@ -135,7 +57,9 @@ button.darkmode{
 
 
 
-/* estrenos */
+/* Cards Style */
+
+
 .container{
   position: relative;
   display: flex;
@@ -260,6 +184,8 @@ background-repeat: no-repeat;
 
 
 /* Imagenes cards recommnended */
+
+
 section .container .imgTen{
   background-image: url(../images/recomendadas/back.jpg);
   background-size:cover;
@@ -277,7 +203,11 @@ background-image: url(../images/recomendadas/star.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
-/* Classic */
+
+
+/* Imagenes de las cards Classic */
+
+
 section .container .imgThirteen{
   background-image: url(../images/clasicas/pulp\ fiction.jpg);
   background-size:cover;
@@ -294,8 +224,88 @@ background-image: url(../images/clasicas/the-godfather-631704l.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
+
+
+/* Backgrounds de pagina movieth1 butacas */
+
+.avatar{
+  background-image: url("../images/backgrounds/avatar.jpg");
+  opacity:0.8;
+}
+.avengers{
+  background-image: url("../images/backgrounds/avengers.webp");
+  opacity:0.8;
+  background-size: cover;
+}
+.caballeros{
+  background-image: url("../images/backgrounds/caballeros_del_zodiaco.webp");
+  opacity:0.8;
+  background-size: cover;
+}
+.ironman{
+  background-image: url("../images/backgrounds/ironman.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.james{
+  background-image: url("../images/backgrounds/james.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.matrix{
+  background-image: url("../images/backgrounds/matrix.webp");
+  opacity:0.8;
+  background-size: cover;
+}
+.thor{
+  background-image: url("../images/backgrounds/thor.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.wakanda{
+  background-image: url("../images/backgrounds/wakanda.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.wolverine{
+  background-image: url("../images/backgrounds/wolverine.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.pulp-fiction{
+  background-image: url("../images/backgrounds/pulp_fintion.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.taxi-driver{
+  background-image: url("../images/backgrounds/taxi_driver.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.godfather{
+  background-image: url("../images/backgrounds/godfather.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.back-to-the-future{
+  background-image: url("../images/backgrounds/backtothefuture.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.indiana-jones{
+  background-image: url("../images/backgrounds/indiana.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.starWars{
+  background-image: url("../images/backgrounds/starwars.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+
+
   
-/* login */
+/* Formulario login */
 
 
 .center button {
@@ -325,8 +335,6 @@ background-repeat: no-repeat;
 
 .hide{
   display: none;
-
-
 }
 
 .loginPopup .close-btn{
@@ -392,7 +400,7 @@ background-repeat: no-repeat;
 
 }
 
-/* Sign Up */
+/* Formulario Sign Up */
 
 .popup {
   position: absolute;
