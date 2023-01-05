@@ -36,12 +36,14 @@ function movieCard(){
         </div>
         `
         cardCreator.appendChild(div)
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 4,
+            speed: 400
+            });
     })
 }
 
 movieCard();
-
-
 
 
 
