@@ -228,7 +228,7 @@ movieCardClassic();
 
  document.querySelectorAll(".btn-buy").addEventListener("click", function(){
     // e.preventDefault();
-    let backGroundToLs = 
+    let backGroundToLs = ;
     localStorage.setItem("backGroundOnLs", backGroundToLs);
     });
 
