@@ -272,21 +272,6 @@ background-repeat: no-repeat;
   opacity:0.8;
   background-size: cover;
 }
-.pulp-fiction{
-  background-image: url("../images/backgrounds/pulp_fintion.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.taxi-driver{
-  background-image: url("../images/backgrounds/taxi_driver.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
-.godfather{
-  background-image: url("../images/backgrounds/godfather.jpg");
-  opacity:0.8;
-  background-size: cover;
-}
 .back-to-the-future{
   background-image: url("../images/backgrounds/backtothefuture.jpg");
   opacity:0.8;
@@ -302,6 +287,22 @@ background-repeat: no-repeat;
   opacity:0.8;
   background-size: cover;
 }
+.pulp-fiction{
+  background-image: url("../images/backgrounds/pulp_fintion.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.taxi-driver{
+  background-image: url("../images/backgrounds/taxi_driver.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+.godfather{
+  background-image: url("../images/backgrounds/godfather.jpg");
+  opacity:0.8;
+  background-size: cover;
+}
+
 
 
   

@@ -10,6 +10,9 @@ function cambiarModoColor(button) {
     button.classList.toggle("darkmode");
 }
 
+
+// Recuperamos el valor de backGrooundOnLs
+
 let classBackGround = localStorage.getItem("backGroundOnLs");
 
 console.log(classBackGround);
