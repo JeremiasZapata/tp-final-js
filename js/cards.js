@@ -163,10 +163,16 @@ function movieCardPremmiere(){
         </div>
         `
         cardPremmiereCreator.appendChild(div)
+        const backGroundToLs = document.getElementById(`${el.nommbre}`)
+        backGroundToLs.addEventListener("click", () => {
+            console.log(`${el.nommbre}`)
+            localStorage.setItem("backGroundOnLs", `${el.nommbre}`);
+        })
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 4,
             speed: 400
             });
+            
     })
 }
 
@@ -189,6 +195,11 @@ function movieCardRecommended(){
         </div>
         `
         cardRecommendedCreator.appendChild(div)
+        const backGroundToLs = document.getElementById(`${el.nommbre}`)
+        backGroundToLs.addEventListener("click", () => {
+            console.log(`${el.nommbre}`)
+            localStorage.setItem("backGroundOnLs", `${el.nommbre}`);
+        })
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 4,
             speed: 400
@@ -226,11 +237,4 @@ movieCardClassic();
 
  /* Capturamos el valor del boton de la card y lo guardamos en el localStorage*/
 
- document.querySelectorAll(".btn-buy").addEventListener("click", function(){
-    // e.preventDefault();
-    let backGroundToLs = ;
-    localStorage.setItem("backGroundOnLs", backGroundToLs);
-    });
-
-
-
+ 

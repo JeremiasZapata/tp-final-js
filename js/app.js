@@ -158,7 +158,7 @@ function agregarNuevoUser(nuevoUsuario){
 
   /* Capturamos el valor del boton de la card */
 
-  document.querySelectorAll("#avatar-btn").addEventListener("click", function(){
+  document.querySelectorAll(".btn-test").addEventListener("click", function(){
     // e.preventDefault();
     let backGroundToLs = "matrix";
     localStorage.setItem("backGroundOnLs", backGroundToLs);
