@@ -128,6 +128,7 @@ document.querySelector(".passMisstaken .close-btn").addEventListener("click",fun
   datosFormularioLogin.reset();
   });
 
+//Comprobacion de coincidencia de pass y confirmPass
 
 if (signUpPassword !== ConfirmPassword) {
   console.log("las contraseñas no coinciden");

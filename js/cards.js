@@ -158,7 +158,7 @@ function movieCardPremmiere(){
                     <h2>${el.sala}</h2>
                     <h3>Movie theatre</h3>
                     <p>${el.descripcion}</p>
-                    <a href="../pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
+                    <a href="./pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
                 </div>
         </div>
         `
@@ -190,7 +190,7 @@ function movieCardRecommended(){
                     <h2>${el.sala}</h2>
                     <h3>Movie theatre</h3>
                     <p>${el.descripcion}</p>
-                    <a href="../pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
+                    <a href="./pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
                 </div>
         </div>
         `
@@ -220,11 +220,16 @@ function movieCardClassic(){
                     <h2>${el.sala}</h2>
                     <h3>Movie theatre</h3>
                     <p>${el.descripcion}</p>
-                    <a class="btn-buy" href="../pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
+                    <a class="btn-buy" href="./pages/movieTh1.html" id="${el.nommbre}">Buy Ticket</a>
                 </div>
         </div>
         `
         cardClassicCreator.appendChild(div)
+        const backGroundToLs = document.getElementById(`${el.nommbre}`)
+        backGroundToLs.addEventListener("click", () => {
+            console.log(`${el.nommbre}`)
+            localStorage.setItem("backGroundOnLs", `${el.nommbre}`);
+        })
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 4,
             speed: 400
@@ -233,8 +238,3 @@ function movieCardClassic(){
 }
 
 movieCardClassic();
-
-
- /* Capturamos el valor del boton de la card y lo guardamos en el localStorage*/
-
- 

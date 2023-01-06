@@ -11,7 +11,7 @@ function cambiarModoColor(button) {
 }
 
 
-// Recuperamos el valor de backGrooundOnLs
+// Recuperamos el valor de backGrooundOnLs que enviamos desde index con el id
 
 let classBackGround = localStorage.getItem("backGroundOnLs");
 
