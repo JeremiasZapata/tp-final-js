@@ -7,7 +7,8 @@ const moviesPremiere = [
         descripcion: "Es una re pelicula re copada con muchos efectos",
         sala: "01",
         movieId: 001,
-        img: "imgOne", 
+        img: "imgOne",
+        dia: "lunes, mier" 
     },
     {
         nommbre: "avengers",
@@ -85,7 +86,7 @@ const moviesPremiere = [
 
 const moviesRecommended = [
     {
-        nommbre: "back-to-the-future",
+        nommbre: "backToTheFuture",
         duracion: 120,
         rate: "ATP",
         descripcion: "Es una re pelicula re copada con muchos efectos",
@@ -94,7 +95,7 @@ const moviesRecommended = [
         img:"imgTen", 
     },
     {
-        nommbre: "indiana-jones",
+        nommbre: "indianaJones",
         duracion: 120,
         rate: "ATP",
         descripcion: "Es una re pelicula re copada con muchos efectos",
@@ -115,7 +116,7 @@ const moviesRecommended = [
 
 const moviesCassic = [
     {
-        nommbre: "pulp-fiction",
+        nommbre: "pulpFiction",
         duracion: 120,
         rate: "ATP",
         descripcion: "Es una re pelicula re copada con muchos efectos",
@@ -124,7 +125,7 @@ const moviesCassic = [
         img:"imgThirteen", 
     },
     {
-        nommbre: "taxi-driver",
+        nommbre: "taxiDriver",
         duracion: 120,
         rate: "ATP",
         descripcion: "Es una re pelicula re copada con muchos efectos",
