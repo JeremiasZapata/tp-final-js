@@ -187,12 +187,12 @@ const dayCreator = document.querySelector('#day');
 
 
 function formularioDias() {
-    starWars.forEach(el => {
-        const diasHorarios = document.createElement('div');
-        day.innerHTML = `
-        <option value="15:00">${el.dia}</option>
+    godFather.forEach(x => {
+        const diasHorarios = document.createElement('option');
+        diasHorarios.innerHTML = `
+        ${x.dia}
         `
-        // dayCreator.appendChild(diasHorarios)
+        dayCreator.appendChild(diasHorarios)
     })
     console.log(classBackGround)
 }
