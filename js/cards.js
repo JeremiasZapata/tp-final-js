@@ -134,7 +134,7 @@ const moviesCassic = [
         img:"imgFourteen", 
     },
     {
-        nommbre: "godfather",
+        nommbre: "godFather",
         duracion: 120,
         rate: "ATP",
         descripcion: "Es una re pelicula re copada con muchos efectos",
