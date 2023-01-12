@@ -19,7 +19,6 @@ function cargarIdAlArray (e){
 // para cada boton 
 colorModeButton.forEach((button) => {
     button.addEventListener("click", () => cambiarModoColor(button));
-
 });
 
 function cambiarModoColor(button) {
