@@ -1,8 +1,25 @@
 // Seats
+// Hacemos nodelist para luego recorrerlas y sacar la info necesaria
 const colorModeButton = document.querySelectorAll(".color-mode");
+const seatSelector = document.querySelectorAll(".seat-sel")
 
+
+//Recorremos el nodeList seatSelector y le agregamos un listener que llame a la funcion
+seatSelector.forEach(el => {
+    el.addEventListener("click" , cargarIdAlArray )    
+} )
+const IdArray = [];
+
+//cargamos el id de la butaca seleccionada en IdArray
+function cargarIdAlArray (e){
+    IdArray.push(e.target.id)
+    console.log(IdArray)
+}
+
+// para cada boton 
 colorModeButton.forEach((button) => {
     button.addEventListener("click", () => cambiarModoColor(button));
+
 });
 
 function cambiarModoColor(button) {
