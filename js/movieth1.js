@@ -50,8 +50,11 @@ cantidadEntradas()
 //************************************************************************************************* */
 // cambio de estado de la butaca
 let estado = false;
-let btnA01 = document.querySelector('#A01');
-btnA01.addEventListener("click", mostrarOcultar)
+let btnA01 = document.querySelectorAll(".boolChange");
+btnA01.forEach((el) => {
+    el.addEventListener("click", mostrarOcultar);
+});
+// btnA01.addEventListener("click", mostrarOcultar)
 
 
 function mostrarOcultar() {
