@@ -140,17 +140,17 @@
 
 
     <!-- Dia y horario de las funciones -->
-    <form id="Formulario-dias" class="">
+    <form action="feeding" method="post" class="">
         <div class="container">
-            <select class="form-select mt-5" id="cantidadButacas">
-                <option selected>Seleccione cantidad de butacas</option>
-                <option id="">1</option>
-                <option id="">2</option>
-                <option id="">3</option>
-                <option id="">4</option>
-                <option id="">5</option>
+            <select onChange="cantidadEntradas()" class="form-select mt-5" id="cantidadButacas">
+                <option value="0" selected>Seleccione cantidad de butacas</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
-            <select class="form-select mt-5" id="funcion">
+            <select onChange="fechaEntradas()" class="form-select mt-5" id="funcion">
                 <option selected>Seleccione el día</option>
             </select>
             
