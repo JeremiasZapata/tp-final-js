@@ -42,10 +42,24 @@ fechaEntradas()
 //recupero el valor de la cantidad de entradas
 function cantidadEntradas() {
     let selectSeat = document.getElementById("cantidadButacas");
-    console.log(selectSeat.value);
-
+    selectSeat.addEventListener("change", ()=> {
+        console.log(selectSeat.value);
+    })
+    return selectSeat
 }
-cantidadEntradas()
+const cantSeats = cantidadEntradas()
+
+//*********************************************************************************************** */
+// Cargamos ID butacas seleccionadas en el IdArray
+function cargarIdAlArray (e) {
+    IdArray.push(e.target.id);
+    console.log(IdArray);
+    if(IdArray.length == cantSeats.value){
+        alert("no more seat to select");
+    }
+}
+
+
 
 //************************************************************************************************* */
 // cambio de estado de la butaca
