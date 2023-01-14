@@ -12,10 +12,12 @@ const IdArray = [];
 //cargamos el id de la butaca seleccionada en IdArray
 function cargarIdAlArray(e) {
     IdArray.push(e.target.id);
+    seatId = e.target.id;
+    console.log(seatId)
     console.log(IdArray);
 }
 
-// para cada boton
+// Cambiamos el color del asiento cada vez que se hace click agregandole la clase.
 colorModeButton.forEach((button) => {
     button.addEventListener("click", () => cambiarModoColor(button));
 });
@@ -42,7 +44,7 @@ fechaEntradas()
 //recupero el valor de la cantidad de entradas
 function cantidadEntradas() {
     let selectSeat = document.getElementById("cantidadButacas");
-    selectSeat.addEventListener("change", ()=> {
+    selectSeat.addEventListener("change", () => {
         console.log(selectSeat.value);
     })
     return selectSeat
@@ -50,34 +52,22 @@ function cantidadEntradas() {
 const cantSeats = cantidadEntradas()
 
 //*********************************************************************************************** */
-// Cargamos ID butacas seleccionadas en el IdArray
+// Cargamos ID butacas seleccionadas en el IdArray si no esta la agrega, si esta la borra
+
+
+
 function cargarIdAlArray (e) {
-    IdArray.push(e.target.id);
-    console.log(IdArray);
-    if(IdArray.length == cantSeats.value){
-        alert("no more seat to select");
+
+    // si no está, lo agregamos
+    if(!IdArray.includes(e.target.id)){
+        IdArray.push(e.target.id);
+        console.log(IdArray);
     }
-}
-
-
-
-//************************************************************************************************* */
-// cambio de estado de la butaca
-let estado = false;
-let btnA01 = document.querySelectorAll(".boolChange");
-btnA01.forEach((el) => {
-    el.addEventListener("click", mostrarOcultar);
-});
-// btnA01.addEventListener("click", mostrarOcultar)
-
-
-function mostrarOcultar() {
-    if (estado == false) {
-        estado = true;
-        console.log("verdadero")
-    } else if (estado == true) {
-        estado = false;
-        console.log("falso")
+    // sino lo eliminamos
+    else{
+        let index = IdArray.indexOf(e.target.id);
+        IdArray.splice(index, 1);
+        console.log(IdArray, "borrado");
     }
 }
 
