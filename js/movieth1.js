@@ -2,7 +2,6 @@
 // Hacemos nodelist para luego recorrerlas y sacar la info necesaria
 const colorModeButton = document.querySelectorAll(".color-mode");
 const seatSelector = document.querySelectorAll(".seat-sel");
-const reservarbtn = document.querySelector("#reservar");
 
 //Recorremos el nodeList seatSelector y le agregamos un listener que llame a la funcion
 seatSelector.forEach((el) => {
@@ -56,26 +55,32 @@ const cantSeats = cantidadEntradas()
 
 function cargarIdAlArray (e) {
 
-    // si no está, lo agregamos
-    if(!IdArray.includes(e.target.id)){
-        IdArray.push(e.target.id);
-        console.log(IdArray);
-    }
-    // sino lo eliminamos
-    else{
-        let index = IdArray.indexOf(e.target.id);
-        IdArray.splice(index, 1);
-        console.log(IdArray);
-    }
-    if(IdArray.length > cantSeats.value){
+    if(IdArray.length < cantSeats.value){
+        //sino esta lo agregamos
+        if(!IdArray.includes(e.target.id)){
+            IdArray.push(e.target.id);
+            console.log(IdArray);
+        }
+        // sino lo eliminamos
+        else{
+            let index = IdArray.indexOf(e.target.id);
+            IdArray.splice(index, 1);
+            console.log(IdArray);
+        }
+    }else{
         Swal.fire({
             title: 'Warning',
             text: 'No more seats to be select',
-            icon: 'error',
+            icon: 'warning',
             confirmButtonText: 'Ok'
-        })
-    }
+            })
+        }
 }
+
+    
+    
+    
+
 
 
 
@@ -238,6 +243,3 @@ btnreservar.addEventListener("click", function () {
 <h5>Vas a asistir el dia ${dia} a las ${hora} hs.</h5>
 </div>`;
 });
-
-
-
