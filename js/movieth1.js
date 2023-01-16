@@ -2,12 +2,15 @@
 // Hacemos nodelist para luego recorrerlas y sacar la info necesaria
 const colorModeButton = document.querySelectorAll(".color-mode");
 const seatSelector = document.querySelectorAll(".seat-sel");
+const reservarbtn = document.querySelector("#reservar");
 
 //Recorremos el nodeList seatSelector y le agregamos un listener que llame a la funcion
 seatSelector.forEach((el) => {
     el.addEventListener("click", cargarIdAlArray);
 });
 const IdArray = [];
+
+
 
 
 // Cambiamos el color del asiento cada vez que se hace click agregandole la clase.
@@ -73,6 +76,9 @@ function cargarIdAlArray (e) {
         })
     }
 }
+
+
+
 
 
 //************************************************************************************************** */
@@ -232,3 +238,6 @@ btnreservar.addEventListener("click", function () {
 <h5>Vas a asistir el dia ${dia} a las ${hora} hs.</h5>
 </div>`;
 });
+
+
+
