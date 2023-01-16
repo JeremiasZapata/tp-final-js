@@ -9,13 +9,6 @@ seatSelector.forEach((el) => {
 });
 const IdArray = [];
 
-//cargamos el id de la butaca seleccionada en IdArray
-function cargarIdAlArray(e) {
-    IdArray.push(e.target.id);
-    seatId = e.target.id;
-    console.log(seatId)
-    console.log(IdArray);
-}
 
 // Cambiamos el color del asiento cada vez que se hace click agregandole la clase.
 colorModeButton.forEach((button) => {
@@ -33,7 +26,10 @@ function cambiarModoColor(button) {
 //recupero el valor de la fecha de las entradas
 function fechaEntradas() {
     let selectDay = document.getElementById("funcion");
-    console.log(selectDay.value);
+    selectDay.addEventListener("change", () => {
+        console.log(selectDay.value);
+    })
+    return selectDay;
 
 }
 fechaEntradas()
@@ -51,10 +47,9 @@ function cantidadEntradas() {
 }
 const cantSeats = cantidadEntradas()
 
+
 //*********************************************************************************************** */
-// Cargamos ID butacas seleccionadas en el IdArray si no esta la agrega, si esta la borra
-
-
+// Cargamos ID butacas seleccionadas en el IdArray si no esta la agrega,
 
 function cargarIdAlArray (e) {
 
@@ -67,19 +62,20 @@ function cargarIdAlArray (e) {
     else{
         let index = IdArray.indexOf(e.target.id);
         IdArray.splice(index, 1);
-        console.log(IdArray, "borrado");
+        console.log(IdArray);
+    }
+    if(IdArray.length > cantSeats.value){
+        Swal.fire({
+            title: 'Warning',
+            text: 'No more seats to be select',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+        })
     }
 }
 
+
 //************************************************************************************************** */
-
-
-
-
-
-
-
-
 
 // Recuperamos el valor de backGrooundOnLs que enviamos desde index con el id
 
@@ -93,7 +89,6 @@ document.querySelector("#background").classList.add(classBackGround);
 
 //dias por peliculas
 
-//~~ array 2.0
 const peliculas = [
     {
         movie: "avatar",
@@ -206,7 +201,7 @@ function formularioDias(arraydias) {
 
         dayMovie.innerHTML = `${x.dia}`;
 
-        //~~ pase el value asi, ahora es dinámico
+        
         dayMovie.value = x.dia;
 
         dayCreator.appendChild(dayMovie);
