@@ -10,6 +10,10 @@ body{
   background: #000000;
 
 }
+#Title{
+  text-align: center;
+  font-size:x-large;
+}
 
 h1 {
   color: #fff;
@@ -323,7 +327,7 @@ background-repeat: no-repeat;
 
 .loginPopup {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 30%;
   opacity: 1;
   width: 380px;
@@ -405,7 +409,7 @@ background-repeat: no-repeat;
 
 .popup {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 30%;
   opacity: 1;
   width: 380px;

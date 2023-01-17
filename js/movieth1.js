@@ -272,8 +272,8 @@ let classBackGround = localStorage.getItem("backGroundOnLs");
     if(classBackGround == "james"){
         localStorage.setItem('jamesArray',JSON.stringify(IdArray) )
 
-    }else{
-        alert("no es james")
+    }else if(classBackGround == "wakanda") {
+        
     }
     
 })
