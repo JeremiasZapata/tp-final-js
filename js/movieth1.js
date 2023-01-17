@@ -241,4 +241,9 @@ document.querySelector("#reservar").addEventListener("click",function(){
     document.getElementById("fechaFuncion").innerHTML += " "  + selectDay.value + " ";
 });
 
+//********************************************************************************************************* */
 
+document.querySelector("#confirmBuy").addEventListener("click",function(){
+    document.querySelector(".loginPopup").classList.add("hide");
+    document.querySelector(".email").classList.remove("hide");
+})
