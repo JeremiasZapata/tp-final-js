@@ -5,7 +5,7 @@ const cardClassicCreator = document.querySelector('#movie-cards-classic');
 //******************************************************************************** */
 //card premmier con json
 
-fetch("../js/premmier.json")
+fetch("/js/premmier.json")
     .then(response => response.json())
     .then (premmier => {
 
