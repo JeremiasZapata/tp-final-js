@@ -23,13 +23,12 @@ function cambiarModoColor(button) {
 
 
 
-
 //****************************************************************************************************** */
 //recupero el valor de la fecha de las entradas
+let selectDay
 function fechaEntradas() {
-    let selectDay = document.getElementById("funcion");
+    selectDay = document.getElementById("funcion");
     selectDay.addEventListener("change", () => {
-        console.log(selectDay.value);
     })
     return selectDay;
 
@@ -54,36 +53,31 @@ const cantSeats = cantidadEntradas()
 // Cargamos ID butacas seleccionadas en el IdArray si no esta la agrega,
 
 function cargarIdAlArray (e) {
+        
+    
 
-    if(IdArray.length < cantSeats.value){
-        //sino esta lo agregamos
-        if(!IdArray.includes(e.target.id)){
-            IdArray.push(e.target.id);
-            console.log(IdArray);
-        }
-        // sino lo eliminamos
-        else{
-            let index = IdArray.indexOf(e.target.id);
-            IdArray.splice(index, 1);
-            console.log(IdArray);
-        }
-    }else{
+    // si no está, lo agregamos
+    if(!IdArray.includes(e.target.id)){
+        IdArray.push(e.target.id);
+        console.log(IdArray);
+    }
+    // sino lo eliminamos
+    else{
+        let index = IdArray.indexOf(e.target.id);
+        IdArray.splice(index, 1);
+        console.log(IdArray);
+    }
+    if(IdArray.length > cantSeats.value){
         Swal.fire({
             title: 'Warning',
             text: 'No more seats to be select',
             icon: 'warning',
             confirmButtonText: 'Ok'
             })
-        }
+        
+    }
+    
 }
-
-    
-    
-    
-
-
-
-
 
 
 //************************************************************************************************** */
@@ -229,17 +223,22 @@ if (!Object.is(classBackGround, null)) {
     console.log("Error: no se selecciono ninguna película");
 }
 
-////--------OPCIONES MULTIPLES--------------//////
 
-let optionSelected = document.querySelectorAll(".form-select");
-let btnreservar = document.querySelector(".btn-reservar");
 
-btnreservar.addEventListener("click", function () {
-    let dia = document.querySelector("#day").value;
+//****************************************************************************************************** */
+// Boton reservar
 
-    let selector = document.querySelector(".selector");
-    selector.innerHTML = `
-<div class="alert alert-success" role="alert">
-<h5>Vas a asistir el dia ${dia} a las ${hora} hs.</h5>
-</div>`;
+
+document.querySelector("#reservar").addEventListener("click",function(){
+    
+        document.querySelector(".loginPopup").classList.remove("hide");
+    
+    console.log(selectDay.value);
+    for(i=0;i<IdArray.length;i++){
+
+        document.getElementById("ubicaciones").innerHTML += " "  + IdArray[i] + " ";
+    }
+    document.getElementById("fechaFuncion").innerHTML += " "  + selectDay.value + " ";
 });
+
+

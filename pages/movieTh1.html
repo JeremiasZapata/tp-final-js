@@ -34,7 +34,7 @@
                             <a class="nav-link" href="../index.html#premmiere">Premmiere</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#recommended">Recommended</a>
+                            <a class="nav-link" href="../index.html#recommended">Recommended</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#classic">Classic</a>
@@ -49,6 +49,25 @@
             </div>
         </nav>
     </header>
+    <!-- Seleccion de entradas -->
+    <div class="loginPopup hide">
+        <form class="form">
+            <h2>Your tickets</h2>
+            <div class="form-element">
+                <label for="user">Date:</label>
+            </div>
+            <div class="form-element">
+                <label for="password">Location:</label>
+            </div>
+            <div class="form-element">
+                <label for="remember-me">Cost: </label>
+            </div>
+            <div class="form-element">
+                <button type="submit" id="signIn">OK</button>
+            </div>
+            
+        </form>
+    </div>
 
 
     <div id="background"></div>
@@ -148,7 +167,7 @@
     <!-- Dia y horario de las funciones -->
     <form action="feeding" method="post" class="">
         <div class="container">
-            <select  class="form-select mt-5" id="cantidadButacas">
+            <select  class="form-select mt-5" id="cantidadButacas" required>
                 <option value="0" selected>Seleccione cantidad de butacas</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -164,9 +183,12 @@
     
             
     
-            <button type="submit"  class="btn-reservar btn btn-primary mt-5" id="reservar" >Reservar</button>
+            <button type="button"  class="btn-reservar btn btn-primary mt-5" id="reservar" >Reservar</button>
         </div>
     </form>
+    <div id="ubicaciones">Ubicaciones:</div>
+
+    <div id="fechaFuncion">Fecha:</div>
     
 
 
