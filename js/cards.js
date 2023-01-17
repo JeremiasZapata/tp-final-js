@@ -45,7 +45,7 @@ movieCardPremmiere();
 //************************************************************************************************ */
 //card recommended con json
 
-fetch("../js/recommended.json")
+fetch("./js/recommended.json")
     .then(response => response.json())
     .then (recommended => {
 
@@ -83,7 +83,7 @@ fetch("../js/recommended.json")
 
 //********************************************************************************************************** */
 //card classic con json
-fetch("../js/classic.json")
+fetch("./js/classic.json")
     .then(response => response.json())
     .then (classic => {
 
