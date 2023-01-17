@@ -31,9 +31,10 @@ function fechaEntradas() {
     selectDay.addEventListener("change", () => {
     })
     return selectDay;
-
+    
 }
 fechaEntradas()
+
 
 
 //**************************************************************************************************** */
@@ -229,8 +230,31 @@ if (!Object.is(classBackGround, null)) {
 // Boton reservar
 
 
+
 document.querySelector("#reservar").addEventListener("click",function(){
-    
+    if(cantSeats.value == "0" && selectDay.value == "Seleccione el día" ){
+        Swal.fire({
+            title: 'Warning',
+            text: 'Select date and seat',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+            })
+    }else if(cantSeats.value == "0"){
+        Swal.fire({
+            title: 'Warning',
+            text: 'Select number of seats ',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+            })
+    }else if(selectDay.value == "Seleccione el día"){
+        Swal.fire({
+            title: 'Warning',
+            text: 'Select date',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+            })
+    }
+    else{
         document.querySelector(".loginPopup").classList.remove("hide");
     
     console.log(selectDay.value);
@@ -239,10 +263,11 @@ document.querySelector("#reservar").addEventListener("click",function(){
         document.getElementById("ubicaciones").innerHTML += " "  + IdArray[i] + " ";
     }
     document.getElementById("fechaFuncion").innerHTML += " "  + selectDay.value + " ";
+}
 });
 
 //********************************************************************************************************* */
-
+//ultimo boton ok
 document.querySelector("#confirmBuy").addEventListener("click",function(){
     document.querySelector(".loginPopup").classList.add("hide");
     document.querySelector(".email").classList.remove("hide");
