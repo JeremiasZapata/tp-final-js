@@ -206,10 +206,7 @@ function formularioDias(arraydias) {
         const dayMovie = document.createElement("option");
 
         dayMovie.innerHTML = `${x.dia}`;
-
-        
         dayMovie.value = x.dia;
-
         dayCreator.appendChild(dayMovie);
     });
 }
@@ -271,4 +268,14 @@ document.querySelector("#reservar").addEventListener("click",function(){
 document.querySelector("#confirmBuy").addEventListener("click",function(){
     document.querySelector(".loginPopup").classList.add("hide");
     document.querySelector(".email").classList.remove("hide");
+let classBackGround = localStorage.getItem("backGroundOnLs");
+    if(classBackGround == "james"){
+        localStorage.setItem('jamesArray',JSON.stringify(IdArray) )
+
+    }else{
+        alert("no es james")
+    }
+    
 })
+
+
