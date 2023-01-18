@@ -1,0 +1,7 @@
+Buen dia profesor, antes que nada Gracias por su tiempo y su manera de prensentarnos las herramientas de manera tan clara y simple, por su forma de llevar adelante las clases, por su compromiso con todos.-
+Estuve trabajando mucho sobre esta pagina, preguntando, buscando info, probando, tratando de utilizar la mayoria de los recursos que nos brindo durante el curso.
+He tratado de volcar todos ellos en esta pagina. Con muchos dolores de cabeza y un estress que ni le cuento. 
+Pero lejos de abandonar el proyecto segui adelante intentando todo. Feliz de poder haber logrado esto, sin tener conocimientos previos. Solo coraje y entusiasmo por lo que realizo.
+Hay detalles que no son 100% funcional, pero se iran corrigiendo con el tiempo y tengo ilusion de poder aplicar React a este proyecto.-
+
+

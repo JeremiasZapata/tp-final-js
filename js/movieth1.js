@@ -92,7 +92,6 @@ let classBackGround = localStorage.getItem("backGroundOnLs");
 document.querySelector("#background").classList.add(classBackGround);
 
 //Formulario de dias
-
 //dias por peliculas
 
 const peliculas = [
@@ -252,30 +251,49 @@ document.querySelector("#reservar").addEventListener("click",function(){
             })
     }
     else{
-        document.querySelector(".loginPopup").classList.remove("hide");
-    
-    console.log(selectDay.value);
-    for(i=0;i<IdArray.length;i++){
+        let seatValue
+        let dayValue
+        for(i=0;i<IdArray.length;i++){
 
-        document.getElementById("ubicaciones").innerHTML += " "  + IdArray[i] + " ";
-    }
-    document.getElementById("fechaFuncion").innerHTML += " "  + selectDay.value + " ";
+        seatValue = document.getElementById("ubicaciones").innerHTML += " "  + IdArray[i] + " ";
+        }
+        dayValue = document.getElementById("fechaFuncion").innerHTML += " "  + selectDay.value + " ";
+
+
+
+        console.log(seatValue)
+        console.log(dayValue)
+        const modalticket = document.querySelector('#ubicaciones'); 
+        const div = document.createElement('div');
+            div.innerHTML = `
+            <div class="loginPopup hide">
+        <form class="form">
+            <h2>Your tickets</h2>
+            <div class="form-element">
+                <label for="user">Date: ${dayValue}</label>
+            </div>
+            <div class="form-element">
+                <label for="password">Location: ${seatValue}</label>
+            </div>
+            <div class="form-element">
+                <button type="button" id="confirmBuy">OK</button>
+            </div>
+            
+        </form>
+    </div>
+            `
+            modalticket.appendChild(div)
+    // console.log(selectDay.value);
+    
+
+    document.querySelector(".loginPopup").classList.remove("hide");
+    document.querySelector("#confirmBuy").addEventListener("click",function(){
+        document.querySelector(".loginPopup").classList.add("hide");
+        document.querySelector(".email").classList.remove("hide");
+    
+        
+    })
 }
 });
-
-//********************************************************************************************************* */
-//ultimo boton ok
-document.querySelector("#confirmBuy").addEventListener("click",function(){
-    document.querySelector(".loginPopup").classList.add("hide");
-    document.querySelector(".email").classList.remove("hide");
-let classBackGround = localStorage.getItem("backGroundOnLs");
-    if(classBackGround == "james"){
-        localStorage.setItem('jamesArray',JSON.stringify(IdArray) )
-
-    }else if(classBackGround == "wakanda") {
-        
-    }
-    
-})
 
 
