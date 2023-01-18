@@ -223,7 +223,7 @@ if (!Object.is(classBackGround, null)) {
 
 
 //****************************************************************************************************** */
-// Boton reservar
+// Boton reservar (Se podria usar un switch)
 
 
 
@@ -246,6 +246,13 @@ document.querySelector("#reservar").addEventListener("click",function(){
         Swal.fire({
             title: 'Warning',
             text: 'Select date',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+            })
+    }else if(IdArray.length == "0" || IdArray.length < cantSeats.value){
+        Swal.fire({
+            title: 'Warning',
+            text: 'Selec your seat(s)',
             icon: 'warning',
             confirmButtonText: 'Ok'
             })
